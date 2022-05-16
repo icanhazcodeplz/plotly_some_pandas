@@ -15,3 +15,45 @@ printed output should be:
 Hello my name is zuckerberg
 My processing unit is hpu_v3
 """
+t = df1.groupby('SOURCE_KEY')['DAILY_YIELD'].resample("D").max()
+t.groupby('SOURCE_KEY').mean()
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def mymethod(self):
+        print("Hello my name is " + self.name)
+
+MULTIPLIER = 2
+
+def add_with_multiplier(a, b):
+    return (a +b) * MULTIPLIER
+
+
+
+
+class Multiplier2:
+    multiplier = 2
+
+    def add(self, a, b):
+        return add_with_multiplier()
+
+    def sub_with_multiplier(self, a, b):
+        return (a-b) * self.multiplier
+
+
+class Multiplier3:
+    multiplier = 3
+
+    def add(self, a, b):
+        return add_with_multiplier()
+
+    def sub_with_multiplier(self, a, b):
+        return (a-b) * self.multiplier
+
+
+
+m2 = Multiplier2()
+m3 = Multiplier3()
